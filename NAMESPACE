@@ -1,0 +1,25 @@
+importFrom("stats", "as.formula", "lm", "loess", "median", "quantile")
+importFrom("utils", "browseURL", "read.csv", "write.csv")
+importFrom("graphics", "hist.default", "lines", "par", "title")
+importFrom("methods", "is")
+importFrom("mgcv", "gam")
+import("shiny")
+importFrom("shinyjs", "useShinyjs")
+importFrom("shinythemes", "shinytheme")
+importFrom("shinyFiles", "parseDirPath")
+import("shinyMobile")
+importFrom("EBImage", "colorMode", "otsu", "readImage", "channel", "imageData")
+importFrom("DT", "DTOutput", "datatable", "renderDT")
+importFrom("ggplot2", "annotate", "geom_abline", "geom_point", "ggplot", "ylab")
+importFrom("fs", "dir_create", "path_home")
+export(run_analysis, 
+       run_cal,
+       run_core,
+       run_quan,
+       run_mobile_analysis, 
+       run_mobile_cal,
+       run_mobile_core,
+       run_mobile_quan,  
+       threshold_li, 
+       triangle)
+
