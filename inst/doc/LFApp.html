@@ -12,7 +12,7 @@
 
 <meta name="author" content="Filip Paskali, Weronika Schary, Matthias Kohl" />
 
-<meta name="date" content="2022-11-23" />
+<meta name="date" content="2023-11-06" />
 
 <title>LFA App User’s Guide</title>
 
@@ -362,7 +362,7 @@ code > span.er { color: #a61717; background-color: #e3d2d2; }
 
 <h1 class="title toc-ignore">LFA App User’s Guide</h1>
 <h4 class="author">Filip Paskali, Weronika Schary, Matthias Kohl</h4>
-<h4 class="date">2022-11-23</h4>
+<h4 class="date">2023-11-06</h4>
 
 
 <div id="TOC">
@@ -490,30 +490,30 @@ full purpose analysis app is at</p>
 <h1>Installation</h1>
 <p>The package requires Bioconductor package EBImage, which should be
 installed first via.</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Install package BiocManager</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span>(<span class="sc">!</span><span class="fu">requireNamespace</span>(<span class="st">&quot;BiocManager&quot;</span>, <span class="at">quietly =</span> <span class="cn">TRUE</span>)) </span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">install.packages</span>(<span class="st">&quot;BiocManager&quot;</span>)</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="do">## Use BiocManager to install EBImage</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>BiocManager<span class="sc">::</span><span class="fu">install</span>(<span class="st">&quot;EBImage&quot;</span>, <span class="at">update =</span> <span class="cn">FALSE</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a><span class="do">## Install package BiocManager</span></span>
+<span id="cb1-2"><a href="#cb1-2" tabindex="-1"></a><span class="cf">if</span>(<span class="sc">!</span><span class="fu">requireNamespace</span>(<span class="st">&quot;BiocManager&quot;</span>, <span class="at">quietly =</span> <span class="cn">TRUE</span>)) </span>
+<span id="cb1-3"><a href="#cb1-3" tabindex="-1"></a>  <span class="fu">install.packages</span>(<span class="st">&quot;BiocManager&quot;</span>)</span>
+<span id="cb1-4"><a href="#cb1-4" tabindex="-1"></a><span class="do">## Use BiocManager to install EBImage</span></span>
+<span id="cb1-5"><a href="#cb1-5" tabindex="-1"></a>BiocManager<span class="sc">::</span><span class="fu">install</span>(<span class="st">&quot;EBImage&quot;</span>, <span class="at">update =</span> <span class="cn">FALSE</span>)</span></code></pre></div>
 <p>Our package depends on the most recent version of package
 shinyMobile, which must be installed from github (<a href="https://github.com/RinteRface/shinyMobile" class="uri">https://github.com/RinteRface/shinyMobile</a>) by</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Install package remotes</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span>(<span class="sc">!</span><span class="fu">requireNamespace</span>(<span class="st">&quot;remotes&quot;</span>, <span class="at">quietly =</span> <span class="cn">TRUE</span>)) </span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">install.packages</span>(<span class="st">&quot;remotes&quot;</span>)</span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="do">## Install package shinyMobile</span></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>remotes<span class="sc">::</span><span class="fu">install_github</span>(<span class="st">&quot;RinteRface/shinyMobile&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" tabindex="-1"></a><span class="do">## Install package remotes</span></span>
+<span id="cb2-2"><a href="#cb2-2" tabindex="-1"></a><span class="cf">if</span>(<span class="sc">!</span><span class="fu">requireNamespace</span>(<span class="st">&quot;remotes&quot;</span>, <span class="at">quietly =</span> <span class="cn">TRUE</span>)) </span>
+<span id="cb2-3"><a href="#cb2-3" tabindex="-1"></a>  <span class="fu">install.packages</span>(<span class="st">&quot;remotes&quot;</span>)</span>
+<span id="cb2-4"><a href="#cb2-4" tabindex="-1"></a><span class="do">## Install package shinyMobile</span></span>
+<span id="cb2-5"><a href="#cb2-5" tabindex="-1"></a>remotes<span class="sc">::</span><span class="fu">install_github</span>(<span class="st">&quot;RinteRface/shinyMobile&quot;</span>)</span></code></pre></div>
 <p>For generating our vignette and automatic reports, we need packages
 knitr and rmarkdown, which will be installed next.</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Install package knitr</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span>(<span class="sc">!</span><span class="fu">requireNamespace</span>(<span class="st">&quot;knitr&quot;</span>, <span class="at">quietly =</span> <span class="cn">TRUE</span>)) </span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">install.packages</span>(<span class="st">&quot;knitr&quot;</span>)</span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="do">## Install package rmarkdown</span></span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span>(<span class="sc">!</span><span class="fu">requireNamespace</span>(<span class="st">&quot;rmarkdown&quot;</span>, <span class="at">quietly =</span> <span class="cn">TRUE</span>)) </span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">install.packages</span>(<span class="st">&quot;rmarkdown&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" tabindex="-1"></a><span class="do">## Install package knitr</span></span>
+<span id="cb3-2"><a href="#cb3-2" tabindex="-1"></a><span class="cf">if</span>(<span class="sc">!</span><span class="fu">requireNamespace</span>(<span class="st">&quot;knitr&quot;</span>, <span class="at">quietly =</span> <span class="cn">TRUE</span>)) </span>
+<span id="cb3-3"><a href="#cb3-3" tabindex="-1"></a>  <span class="fu">install.packages</span>(<span class="st">&quot;knitr&quot;</span>)</span>
+<span id="cb3-4"><a href="#cb3-4" tabindex="-1"></a><span class="do">## Install package rmarkdown</span></span>
+<span id="cb3-5"><a href="#cb3-5" tabindex="-1"></a><span class="cf">if</span>(<span class="sc">!</span><span class="fu">requireNamespace</span>(<span class="st">&quot;rmarkdown&quot;</span>, <span class="at">quietly =</span> <span class="cn">TRUE</span>)) </span>
+<span id="cb3-6"><a href="#cb3-6" tabindex="-1"></a>  <span class="fu">install.packages</span>(<span class="st">&quot;rmarkdown&quot;</span>)</span></code></pre></div>
 <p>Finally, one can install package LFApp, where all remaining
 dependencies will be installed automatically.</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Install package LFApp</span></span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>remotes<span class="sc">::</span><span class="fu">install_github</span>(<span class="st">&quot;fpaskali/LFApp&quot;</span>, <span class="at">build_vignette=</span><span class="cn">TRUE</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" tabindex="-1"></a><span class="do">## Install package LFApp</span></span>
+<span id="cb4-2"><a href="#cb4-2" tabindex="-1"></a>remotes<span class="sc">::</span><span class="fu">install_github</span>(<span class="st">&quot;fpaskali/LFApp&quot;</span>, <span class="at">build_vignette=</span><span class="cn">TRUE</span>)</span></code></pre></div>
 <p><br><br></p>
 </div>
 <div id="start-apps" class="section level1">
@@ -521,31 +521,31 @@ dependencies will be installed automatically.</p>
 <p>As already described above, package LFApp includes four different
 shiny apps where there is a desktop and a mobile version for each app.
 They can be started with one of the following commands:</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="do">## desktop versions</span></span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="do">## LFA App core</span></span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>LFApp<span class="sc">::</span><span class="fu">run_core</span>()</span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="do">## LFA App quantification</span></span>
-<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>LFApp<span class="sc">::</span><span class="fu">run_quan</span>()</span>
-<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a><span class="do">## LFA App calibration</span></span>
-<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>LFApp<span class="sc">::</span><span class="fu">run_cal</span>()</span>
-<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a><span class="do">## LFA App full analysis</span></span>
-<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>LFApp<span class="sc">::</span><span class="fu">run_analysis</span>()</span>
-<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a><span class="do">## mobile versions</span></span>
-<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a><span class="do">## LFA App core</span></span>
-<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a>LFApp<span class="sc">::</span><span class="fu">run_mobile_core</span>()</span>
-<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a><span class="do">## LFA App quantification</span></span>
-<span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a>LFApp<span class="sc">::</span><span class="fu">run_mobile_quan</span>()</span>
-<span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-21"><a href="#cb5-21" aria-hidden="true" tabindex="-1"></a><span class="do">## LFA App calibration</span></span>
-<span id="cb5-22"><a href="#cb5-22" aria-hidden="true" tabindex="-1"></a>LFApp<span class="sc">::</span><span class="fu">run_mobile_cal</span>()</span>
-<span id="cb5-23"><a href="#cb5-23" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-24"><a href="#cb5-24" aria-hidden="true" tabindex="-1"></a><span class="do">## LFA App full analysis</span></span>
-<span id="cb5-25"><a href="#cb5-25" aria-hidden="true" tabindex="-1"></a>LFApp<span class="sc">::</span><span class="fu">run_mobile_analysis</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" tabindex="-1"></a><span class="do">## desktop versions</span></span>
+<span id="cb5-2"><a href="#cb5-2" tabindex="-1"></a><span class="do">## LFA App core</span></span>
+<span id="cb5-3"><a href="#cb5-3" tabindex="-1"></a>LFApp<span class="sc">::</span><span class="fu">run_core</span>()</span>
+<span id="cb5-4"><a href="#cb5-4" tabindex="-1"></a></span>
+<span id="cb5-5"><a href="#cb5-5" tabindex="-1"></a><span class="do">## LFA App quantification</span></span>
+<span id="cb5-6"><a href="#cb5-6" tabindex="-1"></a>LFApp<span class="sc">::</span><span class="fu">run_quan</span>()</span>
+<span id="cb5-7"><a href="#cb5-7" tabindex="-1"></a></span>
+<span id="cb5-8"><a href="#cb5-8" tabindex="-1"></a><span class="do">## LFA App calibration</span></span>
+<span id="cb5-9"><a href="#cb5-9" tabindex="-1"></a>LFApp<span class="sc">::</span><span class="fu">run_cal</span>()</span>
+<span id="cb5-10"><a href="#cb5-10" tabindex="-1"></a></span>
+<span id="cb5-11"><a href="#cb5-11" tabindex="-1"></a><span class="do">## LFA App full analysis</span></span>
+<span id="cb5-12"><a href="#cb5-12" tabindex="-1"></a>LFApp<span class="sc">::</span><span class="fu">run_analysis</span>()</span>
+<span id="cb5-13"><a href="#cb5-13" tabindex="-1"></a></span>
+<span id="cb5-14"><a href="#cb5-14" tabindex="-1"></a><span class="do">## mobile versions</span></span>
+<span id="cb5-15"><a href="#cb5-15" tabindex="-1"></a><span class="do">## LFA App core</span></span>
+<span id="cb5-16"><a href="#cb5-16" tabindex="-1"></a>LFApp<span class="sc">::</span><span class="fu">run_mobile_core</span>()</span>
+<span id="cb5-17"><a href="#cb5-17" tabindex="-1"></a></span>
+<span id="cb5-18"><a href="#cb5-18" tabindex="-1"></a><span class="do">## LFA App quantification</span></span>
+<span id="cb5-19"><a href="#cb5-19" tabindex="-1"></a>LFApp<span class="sc">::</span><span class="fu">run_mobile_quan</span>()</span>
+<span id="cb5-20"><a href="#cb5-20" tabindex="-1"></a></span>
+<span id="cb5-21"><a href="#cb5-21" tabindex="-1"></a><span class="do">## LFA App calibration</span></span>
+<span id="cb5-22"><a href="#cb5-22" tabindex="-1"></a>LFApp<span class="sc">::</span><span class="fu">run_mobile_cal</span>()</span>
+<span id="cb5-23"><a href="#cb5-23" tabindex="-1"></a></span>
+<span id="cb5-24"><a href="#cb5-24" tabindex="-1"></a><span class="do">## LFA App full analysis</span></span>
+<span id="cb5-25"><a href="#cb5-25" tabindex="-1"></a>LFApp<span class="sc">::</span><span class="fu">run_mobile_analysis</span>()</span></code></pre></div>
 <p><br><br></p>
 </div>
 <div id="tab-1-cropping-and-segmentation" class="section level1">

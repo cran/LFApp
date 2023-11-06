@@ -1,18 +1,18 @@
-## ---- eval = FALSE------------------------------------------------------------
+## ----eval = FALSE-------------------------------------------------------------
 #  ## Install package BiocManager
 #  if(!requireNamespace("BiocManager", quietly = TRUE))
 #    install.packages("BiocManager")
 #  ## Use BiocManager to install EBImage
 #  BiocManager::install("EBImage", update = FALSE)
 
-## ---- eval = FALSE------------------------------------------------------------
+## ----eval = FALSE-------------------------------------------------------------
 #  ## Install package remotes
 #  if(!requireNamespace("remotes", quietly = TRUE))
 #    install.packages("remotes")
 #  ## Install package shinyMobile
 #  remotes::install_github("RinteRface/shinyMobile")
 
-## ---- eval = FALSE------------------------------------------------------------
+## ----eval = FALSE-------------------------------------------------------------
 #  ## Install package knitr
 #  if(!requireNamespace("knitr", quietly = TRUE))
 #    install.packages("knitr")
@@ -20,11 +20,11 @@
 #  if(!requireNamespace("rmarkdown", quietly = TRUE))
 #    install.packages("rmarkdown")
 
-## ---- eval = FALSE------------------------------------------------------------
+## ----eval = FALSE-------------------------------------------------------------
 #  ## Install package LFApp
 #  remotes::install_github("fpaskali/LFApp", build_vignette=TRUE)
 
-## ---- eval = FALSE------------------------------------------------------------
+## ----eval = FALSE-------------------------------------------------------------
 #  ## desktop versions
 #  ## LFA App core
 #  LFApp::run_core()
